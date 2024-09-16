@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: #808080; /* Initial gray color */
+  text-decoration: none;
+  transition: color 0.25s ease-out;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #086D8A; /* Theme color for underline */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover {
+  color: #086D8A; /* Theme color on hover */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
